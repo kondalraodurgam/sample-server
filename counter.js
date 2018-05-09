@@ -3,12 +3,13 @@ const app = express()
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
 
-var sample = [
-    "Welcome to the backend Project",
-    "Working Backend prohject",
-    "Created GLithc Project"
-]
+var sample = {
+    "original_url": "https://www.google.com",
+    "short_url": "https://little-url.herokuapp.com/8204"
+}
+
 app.get('/', function(req, res) {
+    console.log("GET");
     res.send(sample)
 })
 app.post('/sample', function(req, res) {
